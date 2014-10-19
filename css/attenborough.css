@@ -1,6 +1,55 @@
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    /* background-color: #b0e0e6; */
+.player-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  height: 80px;
+}
+
+.card-wrapper {
+  clear: both;
+  margin-top: 100px;
+}
+.card {
+  width: 95%;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #efefef;
+  margin-bottom: 24px;
+}
+
+.card.active {
+  background-color: rgba(0,240,255,0.35);
+}
+
+
+/** audio player styles **/
+.audio-player, .audio-player div, .audio-player h2, .audio-player a, .audio-player span, .audio-player button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+div.audio-player {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+}
+
+/* play/pause control */
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+  background-color: #555;
 }

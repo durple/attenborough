@@ -7,26 +7,54 @@
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        
+
         <!-- app specific css -->
         <link rel="stylesheet" href="./css/attenborough.css">
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <!-- popcorn js -->
-        <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
-        <script src="./js/attenborough.js"></script>
+        <script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+
+        <script type="text/javascript" src="./js/mediaelement-and-player.min.js"></script>
+        <script type="text/javascript" src="./js/attenborough.js"></script>
     </head>
     <body>
-        <div class="center">
-            Space: 
+        <div class="player-wrapper audio-player">
+
             <audio id="audio-player" controls>
-            <source src="./space.mp3" type="audio/mp3">
-            are you sure your browser supports audio??
-            </audio> 
+            	<source src="./assets/audio/space.mp3" type="audio/mp3">
+				are you sure your browser supports audio??
+            </audio>
+
         </div>
-        <div id="footnotediv">
+
+        <div class="card-wrapper">
+
+        	<div class="card card1 active">
+        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit dolor et elit auctor pretium. Vivamus egestas quam in ornare rhoncus. Integer eget urna interdum, aliquam est ac, ornare velit. Suspendisse quis consectetur ligula. Cras rutrum ante nec luctus mollis. Fusce in turpis sem. Nullam posuere et turpis ut efficitur. Quisque commodo, neque dapibus vulputate commodo, nunc odio congue libero, aliquam dictum erat diam id tellus. In condimentum nisi ac leo tempor, ac condimentum nisi sodales. Proin sed mi dapibus, ornare erat in, ullamcorper dui. Nullam feugiat metus eget dolor aliquet suscipit. In vitae ante euismod, vulputate lectus et, molestie nisi. Phasellus lacinia quam tristique ante iaculis, convallis ultrices dolor semper.</p>
+        	</div>
+
+			<div class="card card2">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit dolor et elit auctor pretium. Vivamus egestas quam in ornare rhoncus. Integer eget urna interdum, aliquam est ac, ornare velit. Suspendisse quis consectetur ligula. Cras rutrum ante nec luctus mollis. Fusce in turpis sem. Nullam posuere et turpis ut efficitur. Quisque commodo, neque dapibus vulputate commodo, nunc odio congue libero, aliquam dictum erat diam id tellus. In condimentum nisi ac leo tempor, ac condimentum nisi sodales. Proin sed mi dapibus, ornare erat in, ullamcorper dui. Nullam feugiat metus eget dolor aliquet suscipit. In vitae ante euismod, vulputate lectus et, molesti</p>
+			</div>
+
         </div>
+        <script type="text/javascript">
+		$(function(){
+		  $('#audio-player').mediaelementplayer({
+		    alwaysShowControls: true,
+		    features: ['playpause','progress','volume'],
+		    audioVolume: 'horizontal',
+		    audioWidth: 450,
+		    audioHeight: 70,
+		    iPadUseNativeControls: true,
+		    iPhoneUseNativeControls: true,
+		    AndroidUseNativeControls: true
+		  });
+		});
+		</script>
     </body>
 </html>
+
